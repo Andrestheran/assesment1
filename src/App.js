@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Products from "./Components/products";
+import About from "./Components/about";
+import { BrowserRouter,  Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/navbar";
+import React from "react";
+import ProductCard from "./Components/Home/home";
+/* 
+fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())
+            .then(json=>console.log(json)) */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <React.Fragment>
+     
+    <BrowserRouter>
+
+    <Navbar />
+      
+      <Routes>
+
+      <Route path='/' element={<ProductCard />}></Route>
+      <Route path='/products' element={<Products /> }> </Route>
+      <Route path='/about' element={<About />} > </Route>
+      
+      </Routes>
+    
+    </BrowserRouter>
+    
+    </React.Fragment>
+    
   );
 }
 

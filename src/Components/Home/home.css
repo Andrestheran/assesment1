@@ -1,0 +1,51 @@
+.container{
+    width: 200px;
+    height: 120px;
+
+}
+
+.header{
+    font-size: 35px;
+    
+}
+
+.ul{
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    
+    
+    
+}
+
+.list{
+    color: black;
+    font-size: 10px;
+    width: 100px ;
+    height: 350px;
+    
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+    
+    
+    
+}
+
+.button{
+    background-color: #4CAF50;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+
+}
