@@ -4,11 +4,11 @@ import About from "./Components/about";
 import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/navbar";
 import React from "react";
-import ProductCard from "./Components/Home/home";
-/* 
-fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=>console.log(json)) */
+import  { Home } from "./Components/Home/home";
+import { ProductDetail } from "./Components/ProductDetail/ProductDetail";
+
+
+
 
 function App() {
   return (
@@ -21,8 +21,9 @@ function App() {
       
       <Routes>
 
-      <Route path='/' element={<ProductCard />}></Route>
+      <Route path='/' element={<Home />}></Route>
       <Route path='/products' element={<Products /> }> </Route>
+      <Route path='/products/:productId' element={<ProductDetail/>}></Route>
       <Route path='/about' element={<About />} > </Route>
       
       </Routes>
